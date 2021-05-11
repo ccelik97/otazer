@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">OTAzer</string>
+    <!-- Settings Activity Title -->
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="add">Add a repository</string>
+    <string name="add_summary">"Total: "</string>
+    <string name="name">Name</string>
+    <string name="url">URL of repository</string>
+    <string name="save">Save repository</string>
+    <string name="something_went_wrong">Something is wrong with your values</string>
+    <string name="succes">successfully</string>
+    <string name="name_summary">will be shown in the notification</string>
+    <string name="url_summary">app will check releases for this url</string>
+    <string name="found">Found update of</string>
+    <string name="no_changelog">Changelog not found</string>
+    <string name="check_out">Check out</string>
+    <string name="alarm">Enable alarm service</string>
+    <string name="alarm_summary">will notify you about updates every 24 hours</string>
+    <string name="manually">Check for updates manually</string>
+    <string name="manually_summary">not affects alarm</string>
+    <string name="repos">Repositories</string>
+    <string name="updates">Updates</string>
+    <string name="disable_alarm">Disable alarm service</string>
+</resources>

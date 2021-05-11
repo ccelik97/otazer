@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/repos">
+        <Preference
+            app:title="@string/add"
+            app:key="add" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/updates">
+    <Preference
+        app:title="@string/manually"
+        app:summary="@string/manually_summary"
+        app:key="manually" />
+    <SwitchPreference
+        app:defaultValue="false"
+        app:title="@string/alarm"
+        app:summary="@string/alarm_summary"
+        app:key="alarm" />
+    </PreferenceCategory>
+</PreferenceScreen>

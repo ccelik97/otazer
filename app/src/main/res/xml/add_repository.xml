@@ -1,0 +1,13 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <EditTextPreference
+        app:title="@string/name"
+        app:key="name"
+        app:summary="@string/name_summary" />
+    <EditTextPreference
+        app:title="@string/url"
+        app:key="url"
+        app:summary="example: https://github.com/catogram/catogram" />
+    <Preference
+        app:title="@string/save"
+        app:key="save" />
+</PreferenceScreen>
