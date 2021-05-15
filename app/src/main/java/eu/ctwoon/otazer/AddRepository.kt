@@ -20,7 +20,7 @@ class AddRepository : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.settings, SettingsFragment())
+                .replace(android.R.id.content, SettingsFragment())
                 .commit()
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -85,11 +85,23 @@ class AddRepository : AppCompatActivity() {
                         )
                         ed.putInt("total", prefs.getInt("total", 0) + 1)
                         ed.apply()
-                        Toast.makeText(context, prefs.getInt("total", 0).toString(), Toast.LENGTH_SHORT).show()
-                        Toast.makeText(context, getString(R.string.succes) + " currrent version: " +  prefs.getString("version_" + prefs.getInt("total", 0).toString(), null), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            context,
+                            prefs.getInt("total", 0).toString(),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        Toast.makeText(
+                            context,
+                            getString(R.string.succes) + " currrent version: " + prefs.getString(
+                                "version_" + prefs.getInt(
+                                    "total",
+                                    0
+                                ).toString(), null
+                            ),
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
-                }
-                catch (e: Exception) {
+                } catch (e: Exception) {
                     Toast.makeText(
                         context,
                         e.message,

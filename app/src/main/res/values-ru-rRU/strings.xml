@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_went_wrong">Что-то пошло не так</string>
+    <string name="succes">Станция успешно добавлена</string>
+    <string name="updates">Обновления</string>
+</resources>

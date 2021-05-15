@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:alpha="@dimen/google_low_ripple_pressed_alpha" android:color="?colorOnSurfaceStateLayer" android:state_pressed="true" android:state_selected="true" />
+    <item android:alpha="@dimen/google_low_ripple_focused_alpha" android:color="?colorOnSecondaryStateLayer" android:state_focused="true" android:state_hovered="true" android:state_selected="true" />
+    <item android:alpha="@dimen/google_low_ripple_focused_alpha" android:color="?colorOnSecondaryStateLayer" android:state_focused="true" android:state_selected="true" />
+    <item android:alpha="@dimen/google_low_ripple_hovered_alpha" android:color="?colorOnSecondaryStateLayer" android:state_hovered="true" android:state_selected="true" />
+    <item android:alpha="@dimen/google_low_ripple_default_alpha" android:color="?colorOnSecondaryStateLayer" android:state_selected="true" />
+    <item android:alpha="@dimen/google_low_ripple_pressed_alpha" android:color="?colorOnSecondaryStateLayer" android:state_checkable="true" android:state_pressed="true" />
+    <item android:alpha="@dimen/google_low_ripple_pressed_alpha" android:color="?colorOnSurfaceStateLayer" android:state_checkable="false" android:state_pressed="true" />
+    <item android:alpha="@dimen/google_low_ripple_focused_alpha" android:color="?colorOnSurfaceStateLayer" android:state_focused="true" android:state_hovered="true" />
+    <item android:alpha="@dimen/google_low_ripple_focused_alpha" android:color="?colorOnSurfaceStateLayer" android:state_focused="true" />
+    <item android:alpha="@dimen/google_low_ripple_hovered_alpha" android:color="?colorOnSurfaceStateLayer" android:state_hovered="true" />
+    <item android:alpha="@dimen/google_low_ripple_default_alpha" android:color="?colorOnSurfaceStateLayer" />
+</selector>

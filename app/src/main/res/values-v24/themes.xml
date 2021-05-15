@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.GoogleMaterial.Light" parent="@style/Base.V24.Theme.GoogleMaterial.Light" />
+
+    <style name="Base.V24.Theme.GoogleMaterial.Light" parent="@style/Base.V23.Theme.GoogleMaterial.Light">
+        <item name="android:contextPopupMenuStyle">
+            @style/Widget.GoogleMaterial.PopupMenu.ContextMenu
+        </item>
+    </style>
+
+</resources>

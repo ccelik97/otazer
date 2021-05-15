@@ -10,7 +10,6 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 
-
 class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,9 +18,11 @@ class SettingsActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.settings, SettingsFragment())
+                .replace(android.R.id.content, SettingsFragment())
                 .commit()
         }
+        //val toolbar: Toolbar = findViewById(R.id.toolbar)
+        //setSupportActionBar(toolbar)
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
@@ -76,5 +77,6 @@ class SettingsActivity : AppCompatActivity() {
                 }
             findPreference<Preference>("alarm")?.onPreferenceChangeListener = changelistener
         }
-    }}
+    }
+}
 

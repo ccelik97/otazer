@@ -20,8 +20,6 @@ import kotlinx.coroutines.*
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
-import java.lang.Exception
-import java.lang.RuntimeException
 import kotlin.properties.Delegates
 
 class Checker : CoroutineScope by MainScope() {
@@ -29,10 +27,12 @@ class Checker : CoroutineScope by MainScope() {
     lateinit var version: String
     lateinit var changelog: String
     lateinit var handler: CoroutineExceptionHandler
+
     @SuppressLint("ServiceCast")
     fun check(context: Context) {
         handler = CoroutineExceptionHandler { _, exception ->
-            val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
+            val connectivityManager =
+                context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
             val activeNetworkInfo = connectivityManager!!.activeNetworkInfo
             if (activeNetworkInfo != null) {
                 val builder = AlertDialog.Builder(context)
@@ -92,11 +92,20 @@ class Checker : CoroutineScope by MainScope() {
 
         val notification: Notification = NotificationCompat.Builder(context, "channel01")
             .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setContentTitle(context.getString(R.string.found) + "" + prefs.getString("name_$i", null) + " • " + version)
+            .setContentTitle(
+                context.getString(R.string.found) + "" + prefs.getString(
+                    "name_$i",
+                    null
+                ) + " • " + version
+            )
             .setContentText(changelog)
             .setDefaults(Notification.DEFAULT_ALL)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .addAction(R.drawable.ic_launcher_foreground, context.getString(R.string.check_out), pendingIntentView)
+            .addAction(
+                R.drawable.ic_launcher_foreground,
+                context.getString(R.string.check_out),
+                pendingIntentView
+            )
             .build()
 
         val notificationManager = NotificationManagerCompat.from(context)
@@ -130,10 +139,9 @@ class Checker : CoroutineScope by MainScope() {
                     }
                     return@withContext
                 }
-            }
-            catch (e: Exception) {
+            } catch (e: Exception) {
                 throw RuntimeException(e.message)
-        }
+            }
         }
     }
 }
